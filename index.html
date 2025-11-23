@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>Portfolio</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>   
+            </nav>
+                <div class="header-text">
+                <p>Welcome to My Website</p>
+                <h1>Hi!, I am <span class="rotator"><span class="rotator-inner"><span>Aditya Anand,</span><span>Footballer,</span><span>Gamer,</span><span>Developer,</span></span></span><br>CSE 01</h1>
+            </div>
+        </div>
+    </div>
+
+<!-------------------about-------------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="para">I’m a motivated and detail-oriented learner who enjoys turning ideas into clear, practical outcomes. I value structured thinking, consistent improvement, and collaborative problem-solving. I approach every project with curiosity, discipline, and a strong focus on delivering meaningful, well-thought-out work.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('techstack')">Techstack</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="techstack">
+                        <ul>
+                            <li><span id>Frontend</span><br>HTML, CSS, JS</li>
+                            <li><span id>Backend</span><br>Python, CPP</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>SplitEZ</span><br>Firebase, HTML/CSS, JS</li>
+                            <li><span>Expense Calculator</span><br>Python, HTML/CSS</li>
+                            <li><span>Portfolio Website</span><br>HTML, CSS, JS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Intermediate</span><br>PCM, YPS 24'</li>
+                            <li><span>Graduation</span><br>B.Tech (CSE), TIET 29'</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------contact-------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact@example.com</p>
+                <p>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
